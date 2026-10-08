@@ -93,3 +93,8 @@
 .book-video{position:absolute;left:780px;top:191px;width:358px;height:385px;display:block;object-fit:contain;background:#101a31;border:6px solid #d6e4ef;border-radius:12px;box-shadow:5px 8px 0 #1d406b55;z-index:2}
 .book-video:focus-visible{outline:4px solid #486ab6;outline-offset:4px}
 @media(max-width:700px){.scene-scrapbook .book-video{position:relative;left:auto;top:auto;width:min(100%,540px);height:min(56vh,560px);margin:0 auto 16px;object-fit:contain;border-width:5px}}
+
+
+.page-controls .music-toggle{border-radius:16px;transition:background .25s ease,color .25s ease,scale .2s ease}
+.page-controls .music-toggle[aria-pressed="true"]{background:#e8dce7;color:#904c6d}
+.page-controls .music-toggle:hover{scale:1.05}

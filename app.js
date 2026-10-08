@@ -8,6 +8,21 @@ const experience = document.querySelector('#experience');
 const digits = [...document.querySelectorAll('.passcode input')];
 const error = document.querySelector('#lockError');
 const reader = document.querySelector('#reader');
+const siteMusic = document.querySelector("#siteMusic");
+const musicToggle = document.querySelector("#musicToggle");
+siteMusic.volume = 0.35;
+function syncMusicToggle(){
+ const isPlaying = !siteMusic.paused;
+ musicToggle.setAttribute("aria-pressed", String(isPlaying));
+ musicToggle.setAttribute("aria-label", isPlaying ? "Pause background music" : "Play background music");
+ musicToggle.textContent = isPlaying ? "♫ Music on" : "♫ Music off";
+}
+siteMusic.addEventListener("play", syncMusicToggle);
+siteMusic.addEventListener("pause", syncMusicToggle);
+musicToggle.addEventListener("click",()=>{
+ if(siteMusic.paused) siteMusic.play().catch(syncMusicToggle);
+ else siteMusic.pause();
+});
 let current = 'cake', unlocked = false, trail = [];
 function sizeStage(){
  document.documentElement.style.setProperty('--lock-scale', Math.min(innerWidth / 1366, innerHeight / 768));
@@ -35,7 +50,7 @@ function showPage(name, record = true){
 }
 function unlock(){
  if(digits.map(d=>d.value).join('') !== PASSCODE){error.textContent='Not quite! Try that special date again.';digits.forEach(d=>d.value='');digits[0].focus();return;}
- unlocked = true; experience.hidden = false;lock.classList.add('is-open');
+ unlocked = true; experience.hidden = false; siteMusic.play().catch(syncMusicToggle);lock.classList.add('is-open');
  showPage('cake',false);sizeStage();
  setTimeout(()=>{lock.hidden=true;lock.setAttribute('aria-hidden','true');},350);
 }
