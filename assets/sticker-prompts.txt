@@ -1,0 +1,5 @@
+Tool: built-in image_gen (transparent background).
+
+party-cat.png — Use case: background-extraction. Extract ONLY the bright highlighted central orange cat wearing yellow sunglasses and a rainbow striped cone party hat, including its two paws and thin white sticker outline. Preserve this exact cat, pose, colours and photographic appearance. Remove every other cat, all text, and the entire grey background. Center this isolated cat tightly on a genuinely transparent canvas; no shadow or new elements.
+
+lock-cat.png — Use case: background-extraction. Extract and faithfully reconstruct ONLY the black and cream halftone smiling cat HEAD wearing the bright royal blue cone party hat with yellow stars, seen near the bottom center of this photographed tablet screen. Keep its tilted cute face, newspaper halftone dot texture, cream irregular cut-paper outline and hat. Correct the perspective distortion to a straight-on sticker. Remove the tablet, fingers, photo, text, stripes and every surrounding element. Output the cat head and hat alone tightly centered on a truly transparent canvas.

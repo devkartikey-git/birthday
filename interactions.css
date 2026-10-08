@@ -1,0 +1,89 @@
+.birthday-hero h1{animation:title-arrive .8s cubic-bezier(.18,.85,.25,1) both}.big-cake{animation:cake-float 3.4s ease-in-out infinite}.big-cake.blown{animation:cake-pop .5s ease-out both}.big-cake.blown .big-cake-side{filter:brightness(1.05)}.birthday-reveal.revealed h2{animation:title-arrive .8s both}.gift-section{scroll-margin-top:18px}.gift-section h2{transition:transform .35s,opacity .35s}.gift-section:has(#giftPrompt[hidden]) .gift-art{animation:kitty-bounce .8s ease-in-out}.gift-choices[hidden],.retry-choice[hidden]{display:none}.retry-choice:not([hidden]){display:block;margin:0 auto}.gift-choice-section{position:relative;min-height:75vh;padding:74px 32px 56px;text-align:center;overflow:hidden;background-color:#fbf8e9;background-image:radial-gradient(circle,#9fc5e9 0 8px,transparent 9px);background-size:90px 90px;background-position:18px 15px;scroll-margin-top:18px}.gift-choice-section:before,.gift-choice-section:after{content:'✦';position:absolute;top:20%;font-size:48px;color:#6d9bca;animation:twinkle 1.8s ease-in-out infinite alternate}.gift-choice-section:before{left:8%}.gift-choice-section:after{right:8%;top:34%;animation-delay:.5s}.gift-choice-section[hidden]{display:none}.gift-choice-section.visible{animation:page-in .65s cubic-bezier(.2,.8,.2,1) both}.gift-choice-section h2{margin:6px 0;font:700 clamp(40px,6vw,72px)/1.1 'Caveat',cursive;color:#193d68}.gift-choice-section .section-intro{margin-bottom:28px}.gift-options{position:relative;z-index:1;display:flex;justify-content:center;align-items:stretch;gap:clamp(18px,6vw,80px);max-width:820px;margin:28px auto}.gift-option{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:130px;padding:10px 14px;border:0;background:transparent;color:#193d68;cursor:pointer;font:22px 'Caveat',cursive;transition:transform .25s}.gift-option-art{display:grid;place-items:center;width:clamp(94px,12vw,150px);height:clamp(94px,12vw,150px);font-size:clamp(70px,9vw,115px);filter:drop-shadow(0 9px 7px #314e6928);animation:gift-hover 2.8s ease-in-out infinite}.gift-option:nth-child(2) .gift-option-art{animation-delay:.2s}.gift-option:nth-child(3) .gift-option-art{animation-delay:.4s}.gift-option:hover{transform:translateY(-12px) rotate(-3deg) scale(1.05)}.gift-option:nth-child(2):hover{transform:translateY(-12px) rotate(3deg) scale(1.05)}.gift-option span:last-child{display:block;min-width:110px;padding:8px 20px;background:#b6d0e9;clip-path:polygon(0 0,100% 0,93% 50%,100% 100%,0 100%,7% 50%);box-shadow:0 7px 10px #324e6924}.gift-detail{position:relative;width:min(100%,660px);margin:20px auto 0;padding:28px 38px 34px;background:#fffdf7;border:1px dashed #9bb5ce;box-shadow:0 12px 28px #304b6324;transform:translateY(18px);opacity:0;transition:opacity .35s,transform .35s}.gift-detail[hidden]{display:none}.gift-detail.visible{opacity:1;transform:translateY(0);animation:page-in .4s both}.gift-detail h3{margin:6px 0 10px;font:600 clamp(28px,4vw,43px) 'Playfair Display',serif;color:#1e406a}.gift-detail>p:last-child{margin:0;font:22px/1.5 'Caveat',cursive;color:#526984}.detail-close{position:absolute;top:7px;right:12px;border:0;background:transparent;color:#7792ac;font-size:27px;cursor:pointer}.album-open .memory-card{animation:memory-pop .55s cubic-bezier(.2,.8,.2,1) both}.album-open .memory-card:nth-child(2n){animation-delay:.08s}.album-open .memory-card:nth-child(3n){animation-delay:.16s}.photo-grid{scroll-margin-top:26px}
+@keyframes title-arrive{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes cake-float{0%,100%{translate:0 0}50%{translate:0 -10px}}@keyframes cake-pop{0%{transform:scale(1)}40%{transform:scale(1.08) rotate(-2deg)}100%{transform:scale(1)}}@keyframes kitty-bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-13px) rotate(-2deg)}70%{transform:translateY(4px)}}@keyframes gift-hover{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}@keyframes page-in{from{opacity:0;transform:translateY(28px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes memory-pop{from{opacity:0;transform:translateY(24px) rotate(0)}to{opacity:1;transform:translateY(0) rotate(var(--memory-tilt,0deg))}}@keyframes twinkle{from{opacity:.35;transform:scale(.8) rotate(-10deg)}to{opacity:1;transform:scale(1.15) rotate(15deg)}}
+@media(max-width:700px){.gift-choice-section{min-height:74vh;padding:52px 12px 38px}.gift-choice-section h2{font-size:43px}.gift-choice-section:before{left:2%;top:10%;font-size:30px}.gift-choice-section:after{right:2%;top:23%;font-size:30px}.gift-options{gap:4px;margin:30px auto;justify-content:space-around}.gift-option{min-width:0;padding:4px}.gift-option-art{width:clamp(75px,23vw,110px);height:clamp(75px,23vw,110px);font-size:clamp(58px,17vw,83px)}.gift-option span:last-child{min-width:80px;padding:7px 13px}.gift-detail{padding:25px 20px 28px}.gift-detail>p:last-child{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Let the scrapbook's hanging decorations drift while the collage stays legible. */
+.scene-scrapbook .scene-bg{animation:scrapbook-dots 42s ease-in-out infinite alternate}
+.scene-scrapbook>.art:not(.book-base):not(.book-tag):not(.book-notecard):not(.book-toy):not(.main-character):not(.quote-frame):not(.book-stamp):not(.book-raccoon):not(.disco){animation:scrapbook-drift 5.6s ease-in-out infinite}
+.scene-scrapbook>.art:nth-of-type(3n){animation-delay:-1.8s}
+.scene-scrapbook>.art:nth-of-type(4n){animation-delay:-3.1s}
+@keyframes scrapbook-dots{from{background-position:50% 50%}to{background-position:52% 48%}}
+@keyframes scrapbook-drift{0%,100%{translate:0 0}50%{translate:0 -7px}}
+
+/* Gentle, staggered motion for the cake scene decorations. */
+.scene-cake .scene-bg{animation:cake-paper-drift 38s ease-in-out infinite alternate}
+.scene-cake .streamer{transform-origin:50% 0;animation:streamer-sway 5.8s ease-in-out infinite alternate;transition:filter .35s ease}
+.scene-cake .streamer.right{animation-delay:-2.9s}
+.scene-cake .spark{animation:twinkle 2.5s ease-in-out infinite alternate,spark-drift 4.8s ease-in-out infinite alternate;transition:filter .35s ease}
+.scene-cake .gingham-left,.scene-cake .gingham-right{animation:gingham-breathe 6.5s ease-in-out infinite alternate;transition:filter .35s ease}
+.scene-cake .gingham-right{animation-delay:-3.2s}
+.scene-cake .dogs{animation:dogs-bob 3.8s ease-in-out infinite;transition:filter .35s ease}
+.scene-cake .dogs.right{animation-delay:-1.9s}
+.scene-cake .scene-title{transition:filter .35s ease}
+.scene-cake.entering .scene-title{animation:title-in .7s .08s ease both,title-glow 3.2s 1s ease-in-out infinite alternate}
+.scene-cake .cake-action{transition:filter .3s ease,scale .3s ease}
+.scene-cake .cake-action:hover{scale:1.035}
+.scene-cake .cake-instruction{animation:instruction-pulse 2.4s ease-in-out infinite;transition:color .25s ease,transform .25s ease}
+.scene-cake .cake-instruction:hover{color:#486ab6;transform:translateY(-3px)}
+@keyframes cake-paper-drift{from{background-position:50% 50%}to{background-position:51.5% 49%}}
+@keyframes streamer-sway{from{rotate:-2deg}to{rotate:2deg}}
+@keyframes spark-drift{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@keyframes gingham-breathe{from{translate:0 0}to{translate:0 -5px}}
+@keyframes dogs-bob{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@keyframes title-glow{from{filter:drop-shadow(0 0 0 #c3a4db00)}to{filter:drop-shadow(0 2px 7px #c3a4db70)}}
+@keyframes instruction-pulse{0%,100%{opacity:.86}50%{opacity:1}}
+
+/* Stagger the first page's entrance after the passcode screen opens. */
+.scene-cake.entering .scene-bg{animation:cake-bg-enter .9s ease both,cake-paper-drift 38s .9s ease-in-out infinite alternate}
+.scene-cake.entering .streamer{animation:decoration-enter .85s cubic-bezier(.2,.8,.2,1) both,streamer-sway 5.8s .85s ease-in-out infinite alternate}
+.scene-cake.entering .streamer.right{animation-delay:.12s,.97s}
+.scene-cake.entering .spark{animation:firework-enter .8s cubic-bezier(.2,.8,.2,1) both,twinkle 2.5s .8s ease-in-out infinite alternate,spark-drift 4.8s .8s ease-in-out infinite alternate}
+.scene-cake.entering .spark.second{animation-delay:.28s,1.08s,1.08s}
+.scene-cake.entering .gingham-left,.scene-cake.entering .gingham-right{animation:panel-enter .8s cubic-bezier(.2,.8,.2,1) both,gingham-breathe 6.5s .8s ease-in-out infinite alternate}
+.scene-cake.entering .gingham-right{animation-delay:.2s,1s}
+.scene-cake.entering .dogs{animation:party-enter .85s cubic-bezier(.2,.8,.2,1) both,dogs-bob 3.8s .85s ease-in-out infinite}
+.scene-cake.entering .dogs.right{animation-delay:.18s,1.03s}
+.scene-cake.entering .cake-action{animation:cake-enter .95s .24s cubic-bezier(.2,.8,.2,1) both,cake-sway 3s 1.19s ease-in-out infinite alternate}
+.scene-cake.entering .cake-instruction{animation:instruction-enter .65s .62s ease both,instruction-pulse 2.4s 1.27s ease-in-out infinite}
+@keyframes cake-bg-enter{from{opacity:0;filter:brightness(1.08)}to{opacity:1;filter:brightness(1)}}
+@keyframes decoration-enter{from{opacity:0;scale:.94}to{opacity:1;scale:1}}
+@keyframes firework-enter{from{opacity:0;scale:.55}to{opacity:1;scale:1}}
+@keyframes panel-enter{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
+@keyframes party-enter{from{opacity:0;scale:.86}to{opacity:1;scale:1}}
+@keyframes cake-enter{from{opacity:0;scale:.78}to{opacity:1;scale:1}}
+@keyframes instruction-enter{from{opacity:0;translate:0 12px}to{opacity:.86;translate:0 0}}
+
+/* Bring the gift kitten into the accept page, then let it resume floating. */
+.scene-accept.entering .gift-kitten{animation:kitten-arrive 1.15s cubic-bezier(.18,.82,.24,1) both,kitten-float 3s 1.15s ease-in-out infinite alternate}
+.scene-accept.entering .tape-left,.scene-accept.entering .tape-right{animation:tape-arrive .8s cubic-bezier(.2,.8,.2,1) both}
+.scene-accept.entering .tape-right{animation-delay:.14s}
+.scene-accept.entering .scene-title{animation:title-in .7s .08s ease both}
+.scene-accept.entering .cloud.yes{animation:choice-arrive .7s .35s cubic-bezier(.2,.8,.2,1) backwards}
+.scene-accept.entering .cloud.no{animation:choice-arrive .7s .5s cubic-bezier(.2,.8,.2,1) backwards}
+.scene-accept .cloud{transition:scale .25s ease,rotate .25s ease,filter .25s ease}
+@keyframes kitten-arrive{0%{opacity:0;transform:translateX(-270px) rotate(-10deg) scale(.84)}72%{opacity:1;transform:translateX(14px) rotate(2deg) scale(1.03)}100%{opacity:1;transform:translateX(0) rotate(0) scale(1)}}
+@keyframes tape-arrive{from{opacity:0;translate:0 -28px}to{opacity:1;translate:0 0}}
+@keyframes choice-arrive{from{opacity:0;translate:0 24px;scale:.85}to{opacity:1;translate:0 0;scale:1}}
+
+/* Reveal the letter and memories in a quiet scrapbook sequence. */
+.scene-letter.entering .letter-paper{animation:paper-arrive .85s .08s cubic-bezier(.2,.8,.2,1) both}
+.scene-letter.entering .letter-clip{animation:sticker-arrive .65s .28s cubic-bezier(.2,.8,.2,1) both}
+.scene-letter.entering .letter-kiss,.scene-letter.entering .couple,.scene-letter.entering .camera,.scene-letter.entering .balloon-dog,.scene-letter.entering .hugging-bears,.scene-letter.entering .party-monkey,.scene-letter.entering .reference-sticker{animation:sticker-arrive .7s .42s cubic-bezier(.2,.8,.2,1) both}
+.scene-letter.entering .couple{animation-delay:.22s}
+.scene-letter.entering .camera{animation-delay:.36s}
+.scene-letter.entering .balloon-dog{animation-delay:.5s}
+.scene-letter.entering .hugging-bears{animation-delay:.58s}
+.scene-letter.entering .party-monkey{animation-delay:.68s}
+.scene-letter.entering .reference-sticker.pink-flower{animation-delay:.55s}
+.scene-letter.entering .letter-photo.first{animation:photo-arrive-left .9s .34s cubic-bezier(.2,.8,.2,1) both}
+.scene-letter.entering .letter-photo.second{animation:photo-arrive-right .9s .55s cubic-bezier(.2,.8,.2,1) both}
+.scene-letter.entering .disco{animation:disco-arrive .8s .22s cubic-bezier(.2,.8,.2,1) both,sway 5s .8s ease-in-out infinite alternate}
+.scene-letter.entering .read-letter-button{animation:button-arrive .65s .7s ease both;transition:background .25s ease,scale .25s ease}
+.scene-letter .read-letter-button:hover{scale:1.04}
+@keyframes paper-arrive{from{opacity:0;translate:-35px 0;scale:.97}to{opacity:1;translate:0 0;scale:1}}
+@keyframes sticker-arrive{from{opacity:0;scale:.65;rotate:-8deg}to{opacity:1;scale:1;rotate:0deg}}
+@keyframes photo-arrive-left{from{opacity:0;translate:70px 20px;scale:.92}to{opacity:1;translate:0 0;scale:1}}
+@keyframes photo-arrive-right{from{opacity:0;translate:80px 24px;scale:.92}to{opacity:1;translate:0 0;scale:1}}
+@keyframes disco-arrive{from{opacity:0;translate:0 -55px;scale:.86}to{opacity:1;translate:0 0;scale:1}}
+@keyframes button-arrive{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
